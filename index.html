@@ -39,11 +39,15 @@ body {
 .serif { font-family:'Cormorant', serif; }
 
 .fade {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity .65s ease, transform .65s ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .55s ease, transform .55s ease;
 }
-.fade.in { opacity:1; transform:translateY(0); }
+.fade.hidden {
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+}
 
 /* ─────────────────────────────────────
    NAV
@@ -246,7 +250,7 @@ nav {
 }
 
 @keyframes riseIn {
-  from { opacity:0; transform:translateY(18px); }
+  from { opacity:1; transform:translateY(0); }
   to   { opacity:1; transform:translateY(0); }
 }
 
@@ -797,12 +801,11 @@ footer {
     <div class="hero-actions">
       <a href="#contact" class="btn-blk">Request a Quote</a>
       <a href="#gold"    class="btn-txt">View Gold Supply</a>
-    </div>
-  </div>
+    </div>  </div>
 
   <div class="hero-r">
     <div class="hero-watermark">Au</div>
-    <div class="hero-stats fade in">
+    <div class="hero-stats">
       <div class="hstat">
         <div class="hstat-v">22–24<sup>K</sup></div>
         <div class="hstat-l">Gold Purity</div>
@@ -1077,17 +1080,17 @@ footer {
   <div class="sec-in">
     <div class="contact-grid">
 
-      <div class="fade">
+      <div>
         <div class="s-label"><div class="s-label-bar"></div><span>Contact</span></div>
         <h2 class="s-title">Ready to<br><i>Start a Deal?</i></h2>
         <p style="font-size:15px;line-height:1.9;color:#5E5C58;max-width:400px;">Contact us directly. We respond to all genuine enquiries within 24 hours and are happy to discuss pricing, documentation, logistics, and visit arrangements.</p>
 
         <div class="c-info">
-          <a href="mailto:eastbridgegolddealers6@gmail.com" class="citem">
+          <a href="/cdn-cgi/l/email-protection#f79296848395859e93909290989b939392969b928584c1b7909a969e9bd994989a" class="citem">
             <span class="citem-ico">✉️</span>
             <div>
               <div class="citem-lbl">Email</div>
-              <div class="citem-val">eastbridgegolddealers6@gmail.com</div>
+              <div class="citem-val">eastbridgegolddealers6&#64;gmail.com</div>
             </div>
           </a>
           <a href="tel:+256778387412" class="citem">
@@ -1121,24 +1124,30 @@ footer {
         </div>
       </div>
 
-      <div class="c-form fade">
+      <div class="c-form">
         <div class="cf-title">Send an Enquiry</div>
-        <p class="cf-sub">Tell us what you need and we'll respond with pricing, availability, and full documentation details.</p>
-        <form onsubmit="formSent(event)">
-          <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
-          <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com" required></div>
-          <div class="fg"><label>Country</label><input type="text" placeholder="Your country"></div>
+        <p class="cf-sub">Fill in your details below. Clicking Send will open your email app with everything ready — just hit send.</p>
+        <form id="enquiryForm">
+          <div class="fg"><label>Full Name</label><input type="text" id="from_name" placeholder="Your name" required></div>
+          <div class="fg"><label>Your Email Address</label><input type="email" id="from_email" placeholder="your@email.com" required></div>
+          <div class="fg"><label>Country</label><input type="text" id="country" placeholder="Your country"></div>
           <div class="fg">
             <label>Gold Type Required</label>
-            <select>
+            <select id="gold_type">
               <option>Alluvial Gold Dust (500g+)</option>
               <option>Smelted Gold Bars (1kg+)</option>
               <option>Monthly Bulk Contract (5kg+)</option>
-              <option>Not Sure — Please Advise</option>
+              <option>Not Sure - Please Advise</option>
             </select>
           </div>
-          <div class="fg"><label>Message</label><textarea placeholder="Quantity needed, destination country, any questions..."></textarea></div>
-          <button type="submit" class="cf-submit" id="cfbtn">Send Enquiry →</button>
+          <div class="fg"><label>Message</label><textarea id="message" placeholder="Quantity needed, destination country, any questions..."></textarea></div>
+          <button type="button" class="cf-submit" id="cfbtn" onclick="submitForm()">Send Enquiry &rarr;</button>
+          <div id="form-msg" style="display:none; margin-top:14px; padding:14px; background:rgba(60,199,106,.15); border:1px solid #3CC76A; color:#3CC76A; font-size:13px; letter-spacing:1px;">
+            &#10003; Your email app has opened with the message ready. Just click Send in your email app.
+          </div>
+          <div id="form-err" style="display:none; margin-top:14px; padding:14px; background:rgba(255,80,80,.1); border:1px solid #ff5050; color:#ff5050; font-size:13px; letter-spacing:1px;">
+            Please fill in your name and email address first.
+          </div>
         </form>
       </div>
 
@@ -1181,7 +1190,7 @@ footer {
       <h5>Contact</h5>
       <ul>
         <li><a href="#">Kampala, Uganda</a></li>
-        <li><a href="mailto:eastbridgegolddealers6@gmail.com">eastbridgegolddealers6@gmail.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#284d495b5c4a5a414c4f4d4f47444c4c4d49444d5a5b1e684f45494144064b4745">eastbridgegolddealers6&#64;gmail.com</a></li>
         <li><a href="tel:+256778387412">+256 778 387 412</a></li>
         <li><a href="https://wa.me/256778387412" target="_blank">WhatsApp Us</a></li>
         <li><a href="#">Mon – Sat, 8am – 6pm EAT</a></li>
@@ -1206,28 +1215,83 @@ footer {
 <!-- ═══════════════════════════════════
      JS
 ═══════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  // Scroll reveal
-  const io = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
+  emailjs.init({ publicKey: 'kyF2YUg8a7HJLotjV' });
+
+  // Scroll reveal - never hide elements that contain form fields
+  document.querySelectorAll('.fade').forEach(function(el) {
+    if (!el.querySelector('input, textarea, select, button')) {
+      el.classList.add('hidden');
+    }
+  });
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e, i) {
       if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('in'), i * 65);
+        setTimeout(function() { e.target.classList.remove('hidden'); }, i * 60);
+        obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.07 });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade').forEach(function(el) { obs.observe(el); });
 
-  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+  function submitForm() {
+    var btn    = document.getElementById('cfbtn');
+    var msgOk  = document.getElementById('form-msg');
+    var msgErr = document.getElementById('form-err');
 
-  // Form submit
-  function formSent(e) {
-    e.preventDefault();
-    const btn = document.getElementById('cfbtn');
-    btn.textContent = '✓ Sent — We\'ll reply within 24 hours';
-    btn.style.background = '#3CC76A';
-    btn.style.color = '#fff';
-    btn.disabled = true;
+    var nameEl  = document.getElementById('from_name');
+    var emailEl = document.getElementById('from_email');
+
+    if (!nameEl || !emailEl) {
+      msgErr.style.display = 'block';
+      return;
+    }
+
+    var name  = nameEl.value.trim();
+    var email = emailEl.value.trim();
+
+    if (!name || !email) {
+      nameEl.style.borderColor  = '#ff5050';
+      emailEl.style.borderColor = '#ff5050';
+      nameEl.focus();
+      return;
+    }
+
+    nameEl.style.borderColor  = '';
+    emailEl.style.borderColor = '';
+
+    btn.textContent      = 'Sending...';
+    btn.disabled         = true;
+    msgOk.style.display  = 'none';
+    msgErr.style.display = 'none';
+
+    var params = {
+      from_name:  name,
+      from_email: email,
+      country:    document.getElementById('country').value.trim() || 'Not specified',
+      gold_type:  document.getElementById('gold_type').value,
+      message:    document.getElementById('message').value.trim() || 'No message provided',
+      reply_to:   email
+    };
+
+    emailjs.send('service_ih9k6gp', 'template_uzffiwm', params)
+    .then(function() {
+      msgOk.style.display  = 'block';
+      msgErr.style.display = 'none';
+      btn.textContent      = 'Sent!';
+      btn.style.background = '#3CC76A';
+      btn.style.color      = '#fff';
+      document.getElementById('enquiryForm').reset();
+    })
+    .catch(function(err) {
+      console.log('EmailJS error:', JSON.stringify(err));
+      msgErr.style.display = 'block';
+      msgOk.style.display  = 'none';
+      btn.textContent      = 'Send Enquiry';
+      btn.disabled         = false;
+    });
   }
 </script>
-
 </body>
 </html>
