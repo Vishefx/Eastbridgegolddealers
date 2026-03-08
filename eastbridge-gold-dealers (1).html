@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EastBridge Gold Dealers — Licensed Gold Supplier, Kampala Uganda</title>
+<meta name="description" content="EastBridge Gold Dealers — Licensed by Uganda Ministry of Energy & Minerals. Premium natural gold sourced from DRC, shipped worldwide. Contact us today.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────
+   TOKENS
+───────────────────────────────────── */
+:root {
+  --black:  #0B0B0B;
+  --ink:    #181818;
+  --white:  #FFFFFF;
+  --cream:  #F8F6F2;
+  --line:   #E5E3DE;
+  --dim:    #8C8880;
+  --gold:   #B8912B;
+  --gold2:  #CFA94A;
+  --green:  #3CC76A;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  background: var(--white);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────
+   UTILS
+───────────────────────────────────── */
+.serif { font-family:'Cormorant', serif; }
+
+.fade {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.fade.in { opacity:1; transform:translateY(0); }
+
+/* ─────────────────────────────────────
+   NAV
+───────────────────────────────────── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:900;
+  height: 68px;
+  display: flex; align-items:center; justify-content:space-between;
+  padding: 0 60px;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo-wrap {
+  display: flex; align-items:center; gap:12px;
+  text-decoration: none;
+}
+
+.logo-emblem {
+  width:34px; height:34px;
+  background: var(--black);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+
+.logo-emblem svg { width:16px; height:16px; fill:var(--gold2); }
+
+.logo-text-main {
+  font-family: 'Cormorant', serif;
+  font-size: 17px; font-weight:700;
+  color: var(--black); letter-spacing:.3px;
+  line-height: 1.15;
+}
+
+.logo-text-sub {
+  font-size: 9px; font-weight:400;
+  letter-spacing: 3px; text-transform:uppercase;
+  color: var(--dim); display:block;
+}
+
+.nav-menu { display:flex; gap:40px; list-style:none; }
+
+.nav-menu a {
+  font-size: 11px; font-weight:400;
+  letter-spacing: 2.5px; text-transform:uppercase;
+  color: var(--dim); text-decoration:none;
+  transition: color .2s;
+}
+.nav-menu a:hover { color:var(--black); }
+
+.nav-cta {
+  font-size: 11px; font-weight:500;
+  letter-spacing: 2px; text-transform:uppercase;
+  color: var(--white); background:var(--black);
+  padding: 11px 26px; text-decoration:none;
+  border: 1px solid var(--black);
+  transition: background .2s, color .2s;
+}
+.nav-cta:hover { background:var(--gold); border-color:var(--gold); }
+
+/* ─────────────────────────────────────
+   HERO
+───────────────────────────────────── */
+.hero {
+  padding-top: 68px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* LEFT */
+.hero-l {
+  padding: 90px 72px;
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative;
+}
+
+.hero-l::after {
+  content:'';
+  position:absolute; right:0; top:12%; bottom:12%;
+  width:1px; background:var(--line);
+}
+
+.h-tag {
+  display:inline-flex; align-items:center; gap:10px;
+  margin-bottom:44px;
+  animation: riseIn .8s ease both;
+}
+.h-tag-bar { width:20px; height:1px; background:var(--gold); }
+.h-tag span {
+  font-size: 9px; font-weight:400;
+  letter-spacing: 4px; text-transform:uppercase;
+  color: var(--gold);
+}
+
+.hero-h1 {
+  font-family: 'Cormorant', serif;
+  font-size: clamp(50px, 5.8vw, 82px);
+  font-weight: 700; line-height:1.0;
+  color: var(--black); margin-bottom:28px;
+  animation: riseIn .8s .08s ease both;
+}
+.hero-h1 i { font-style:italic; color:var(--gold); }
+
+.hero-p {
+  font-size: 15px; font-weight:300; line-height:1.9;
+  color: var(--dim); max-width:400px;
+  margin-bottom: 52px;
+  animation: riseIn .8s .16s ease both;
+}
+
+.hero-actions {
+  display:flex; gap:16px; align-items:center;
+  animation: riseIn .8s .24s ease both;
+}
+
+.btn-blk {
+  font-size: 11px; font-weight:500;
+  letter-spacing: 2.5px; text-transform:uppercase;
+  color: var(--white); background:var(--black);
+  padding: 14px 32px; text-decoration:none;
+  border: 1px solid var(--black);
+  transition: background .2s, border-color .2s;
+}
+.btn-blk:hover { background:var(--gold); border-color:var(--gold); }
+
+.btn-txt {
+  font-size: 11px; font-weight:400;
+  letter-spacing: 2px; text-transform:uppercase;
+  color: var(--ink); text-decoration:none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom:2px;
+  transition: color .2s, border-color .2s;
+}
+.btn-txt:hover { color:var(--gold); border-color:var(--gold); }
+
+/* RIGHT */
+.hero-r {
+  background: var(--cream);
+  display:flex; flex-direction:column;
+  justify-content:flex-end;
+  padding: 56px;
+  position:relative; overflow:hidden;
+}
+
+/* Background pattern */
+.hero-r::before {
+  content:'';
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity:.45;
+}
+
+.hero-watermark {
+  position:absolute;
+  font-family:'Cormorant', serif;
+  font-size: 220px; font-weight:700;
+  color: rgba(184,145,43,.055);
+  top:50%; left:50%;
+  transform: translate(-50%,-50%);
+  user-select:none; white-space:nowrap;
+  letter-spacing: -6px;
+}
+
+.hero-stats {
+  position:relative; z-index:1;
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1px; background:var(--line);
+  border:1px solid var(--line);
+}
+
+.hstat {
+  background:var(--white);
+  padding: 28px 24px;
+  position:relative;
+}
+.hstat::before {
+  content:'';
+  position:absolute; top:0; left:0;
+  width:3px; height:100%;
+  background:var(--gold);
+}
+
+.hstat-v {
+  font-family:'Cormorant', serif;
+  font-size: 34px; font-weight:700;
+  color:var(--black); line-height:1;
+  margin-bottom:6px;
+}
+.hstat-v sup { font-size:16px; color:var(--gold); }
+
+.hstat-l {
+  font-size: 10px; font-weight:400;
+  letter-spacing:2px; text-transform:uppercase;
+  color:var(--dim);
+}
+
+@keyframes riseIn {
+  from { opacity:0; transform:translateY(18px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ─────────────────────────────────────
+   TICKER
+───────────────────────────────────── */
+.ticker {
+  background:var(--black);
+  height:46px; overflow:hidden;
+  display:flex; align-items:center;
+}
+
+.ticker-rail {
+  display:flex;
+  animation: tickerScroll 38s linear infinite;
+  white-space:nowrap;
+}
+
+.t-item {
+  padding: 0 44px;
+  font-size: 10px; font-weight:300;
+  letter-spacing:3px; text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+  display:flex; align-items:center; gap:44px;
+}
+.t-item b { color:var(--gold2); font-weight:400; }
+.t-sep { width:3px; height:3px; border-radius:50%; background:var(--gold); opacity:.45; flex-shrink:0; }
+
+@keyframes tickerScroll {
+  from { transform:translateX(0); }
+  to   { transform:translateX(-50%); }
+}
+
+/* ─────────────────────────────────────
+   SHARED SECTION STYLES
+───────────────────────────────────── */
+.sec { padding:110px 60px; }
+.sec-in { max-width:1140px; margin:0 auto; }
+
+.s-label {
+  display:flex; align-items:center; gap:12px;
+  margin-bottom:16px;
+}
+.s-label-bar { width:18px; height:1px; background:var(--gold); }
+.s-label span {
+  font-size: 9px; font-weight:400;
+  letter-spacing:4px; text-transform:uppercase;
+  color:var(--gold);
+}
+
+.s-title {
+  font-family:'Cormorant', serif;
+  font-size: clamp(32px, 3.8vw, 52px);
+  font-weight:700; line-height:1.1;
+  color:var(--black); margin-bottom:18px;
+}
+.s-title i { font-style:italic; color:var(--gold); }
+
+/* ─────────────────────────────────────
+   ABOUT
+───────────────────────────────────── */
+.about-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:80px; align-items:start;
+}
+
+.about-copy p {
+  font-size:15px; font-weight:300;
+  line-height:1.95; color:#5E5C58;
+  margin-bottom:20px;
+}
+
+.lic-box {
+  margin-top:36px; padding:26px 30px;
+  border-left:3px solid var(--gold);
+  background:var(--cream);
+}
+.lic-box-tag {
+  font-size:9px; font-weight:500;
+  letter-spacing:3px; text-transform:uppercase;
+  color:var(--gold); margin-bottom:10px;
+}
+.lic-box-text {
+  font-family:'Cormorant', serif;
+  font-size:16px; font-style:italic;
+  color:var(--black); line-height:1.7;
+}
+
+.about-list { display:flex; flex-direction:column; }
+
+.alist-row {
+  display:flex; gap:20px; align-items:flex-start;
+  padding:26px 0;
+  border-bottom:1px solid var(--line);
+}
+.alist-row:first-child { border-top:1px solid var(--line); }
+
+.alist-n {
+  font-family:'Cormorant', serif;
+  font-size:12px; font-weight:700;
+  color:var(--gold); padding-top:2px;
+  flex-shrink:0; width:26px;
+}
+.alist-title {
+  font-size:13px; font-weight:500;
+  color:var(--black); margin-bottom:5px;
+}
+.alist-desc {
+  font-size:13px; font-weight:300;
+  line-height:1.75; color:var(--dim);
+}
+
+/* ─────────────────────────────────────
+   TRUST BAND
+───────────────────────────────────── */
+.trust-band { background:var(--black); }
+
+.trust-cells {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:1px; background:#1c1c1c;
+  border:1px solid #1c1c1c;
+  max-width:1140px; margin:0 auto;
+}
+
+.tcell {
+  background:var(--black);
+  padding:44px 28px; text-align:center;
+}
+.tcell-icon { font-size:28px; margin-bottom:14px; }
+.tcell-title {
+  font-family:'Cormorant', serif;
+  font-size:16px; font-weight:700;
+  color:var(--white); margin-bottom:8px;
+}
+.tcell-desc {
+  font-size:12px; font-weight:300;
+  line-height:1.7; color:rgba(255,255,255,.3);
+}
+
+/* ─────────────────────────────────────
+   SERVICES
+───────────────────────────────────── */
+.services-sec { background:var(--black); }
+.services-sec .s-title { color:var(--white); }
+
+.svc-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:#1e1e1e;
+  border:1px solid #1e1e1e;
+  margin-top:56px;
+}
+
+.svc-card {
+  background:var(--ink);
+  padding:48px 40px;
+  position:relative; overflow:hidden;
+  transition: background .3s;
+}
+.svc-card:hover { background:#1d1d1d; }
+
+.svc-card::after {
+  content:'';
+  position:absolute; left:0; bottom:0;
+  height:2px; width:0; background:var(--gold);
+  transition: width .4s;
+}
+.svc-card:hover::after { width:100%; }
+
+.svc-n {
+  font-family:'Cormorant', serif;
+  font-size:60px; font-weight:700;
+  color:rgba(255,255,255,.04); line-height:1;
+  margin-bottom:20px;
+}
+.svc-ico { font-size:24px; margin-bottom:14px; }
+.svc-name {
+  font-family:'Cormorant', serif;
+  font-size:19px; font-weight:700;
+  color:var(--white); margin-bottom:12px;
+}
+.svc-desc {
+  font-size:13px; font-weight:300;
+  line-height:1.85; color:rgba(255,255,255,.36);
+}
+
+/* ─────────────────────────────────────
+   GOLD
+───────────────────────────────────── */
+.gold-sec { background:var(--cream); }
+
+.gold-cards {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:20px; margin-top:56px;
+}
+
+.gcard {
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:38px 34px;
+  transition: border-color .3s, box-shadow .3s;
+}
+.gcard:hover {
+  border-color:var(--gold);
+  box-shadow: 0 6px 28px rgba(184,145,43,.09);
+}
+
+.gcard-head {
+  display:flex; justify-content:space-between;
+  align-items:flex-start; margin-bottom:26px;
+}
+.gtag {
+  font-size:9px; font-weight:500;
+  letter-spacing:3px; text-transform:uppercase;
+  color:var(--white); background:var(--black);
+  padding:4px 11px;
+}
+.gavail {
+  width:7px; height:7px; border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 6px rgba(60,199,106,.5);
+  margin-top:3px;
+}
+
+.gname {
+  font-family:'Cormorant', serif;
+  font-size:24px; font-weight:700;
+  color:var(--black); margin-bottom:5px;
+}
+.gorigin {
+  font-size:10px; font-weight:400;
+  letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--gold); margin-bottom:14px;
+}
+.gdesc {
+  font-size:13px; font-weight:300;
+  line-height:1.8; color:#777;
+  margin-bottom:26px;
+}
+
+.gspecs {
+  border-top:1px solid var(--line);
+  padding-top:18px;
+  display:flex; flex-direction:column; gap:9px;
+}
+.gspec { display:flex; justify-content:space-between; font-size:12px; }
+.gsk { color:var(--dim); }
+.gsv { color:var(--black); font-weight:500; }
+
+.gbtn {
+  display:inline-block; margin-top:22px;
+  font-size:10px; font-weight:500;
+  letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--white); background:var(--black);
+  padding:11px 22px; text-decoration:none;
+  transition: background .2s;
+}
+.gbtn:hover { background:var(--gold); }
+
+/* ─────────────────────────────────────
+   PROCESS
+───────────────────────────────────── */
+.process-sec { background:var(--white); }
+
+.process-grid {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  margin-top:60px; position:relative;
+}
+.process-grid::before {
+  content:'';
+  position:absolute; top:26px; left:12%; width:76%; height:1px;
+  background:var(--line);
+}
+
+.pstep {
+  padding:0 18px; text-align:center;
+  position:relative; z-index:1;
+}
+
+.pstep-ring {
+  width:52px; height:52px; border-radius:50%;
+  border:1px solid var(--line); background:var(--white);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 24px;
+  font-family:'Cormorant', serif;
+  font-size:18px; font-weight:700; color:var(--black);
+  transition: background .3s, border-color .3s, color .3s;
+}
+.pstep:hover .pstep-ring {
+  background:var(--black); border-color:var(--black); color:var(--white);
+}
+
+.pstep-title {
+  font-family:'Cormorant', serif;
+  font-size:16px; font-weight:700;
+  color:var(--black); margin-bottom:10px;
+}
+.pstep-desc {
+  font-size:13px; font-weight:300;
+  line-height:1.75; color:var(--dim);
+}
+
+/* ─────────────────────────────────────
+   CONTACT
+───────────────────────────────────── */
+.contact-sec { background:var(--cream); }
+
+.contact-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:80px; align-items:start;
+}
+
+.c-info { display:flex; flex-direction:column; gap:14px; margin-top:34px; }
+
+.citem {
+  display:flex; align-items:center; gap:16px;
+  padding:17px 20px;
+  background:var(--white);
+  border:1px solid var(--line); border-left:3px solid var(--gold);
+  text-decoration:none; color:inherit;
+  transition: border-color .2s;
+}
+.citem:hover { border-left-color:var(--black); border-color:var(--black); }
+
+.citem-ico { font-size:20px; flex-shrink:0; }
+.citem-lbl {
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--dim); margin-bottom:3px;
+}
+.citem-val { font-size:14px; font-weight:500; color:var(--black); }
+
+/* Form panel */
+.c-form {
+  background:var(--black);
+  padding:48px 44px;
+}
+
+.cf-title {
+  font-family:'Cormorant', serif;
+  font-size:26px; font-weight:700;
+  color:var(--white); margin-bottom:6px;
+}
+.cf-sub {
+  font-size:13px; font-weight:300;
+  color:rgba(255,255,255,.32);
+  line-height:1.7; margin-bottom:30px;
+}
+
+.fg { margin-bottom:16px; }
+.fg label {
+  display:block; font-size:9px; font-weight:400;
+  letter-spacing:3px; text-transform:uppercase;
+  color:rgba(255,255,255,.32); margin-bottom:7px;
+}
+.fg input, .fg select, .fg textarea {
+  width:100%;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  color:var(--white);
+  padding:12px 14px;
+  font-family:'Outfit', sans-serif;
+  font-size:14px; font-weight:300;
+  outline:none;
+  transition: border-color .2s;
+  appearance:none;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--gold); }
+.fg select option { background:#111; }
+.fg textarea { height:88px; resize:vertical; }
+
+.cf-submit {
+  width:100%; margin-top:8px;
+  background:var(--gold); color:var(--black);
+  border:none; padding:15px;
+  font-family:'Outfit', sans-serif;
+  font-size:11px; font-weight:600;
+  letter-spacing:3px; text-transform:uppercase;
+  cursor:pointer; transition: background .2s;
+}
+.cf-submit:hover { background:var(--gold2); }
+
+/* ─────────────────────────────────────
+   FOOTER
+───────────────────────────────────── */
+footer {
+  background:var(--black);
+  border-top:1px solid #1a1a1a;
+  padding:68px 60px 36px;
+}
+
+.foot-top {
+  display:grid; grid-template-columns:2fr 1fr 1fr;
+  gap:56px; max-width:1140px; margin:0 auto 52px;
+}
+
+.foot-logo-wrap {
+  display:flex; align-items:center; gap:12px;
+  text-decoration:none; margin-bottom:18px;
+}
+.foot-logo-mark {
+  width:32px; height:32px;
+  background:var(--gold);
+  display:flex; align-items:center; justify-content:center;
+}
+.foot-logo-mark svg { width:15px; height:15px; fill:var(--black); }
+.foot-logo-name {
+  font-family:'Cormorant', serif;
+  font-size:16px; font-weight:700; color:var(--white);
+}
+
+.foot-desc {
+  font-size:13px; font-weight:300;
+  line-height:1.85; color:rgba(255,255,255,.28);
+  max-width:290px; margin-bottom:24px;
+}
+
+.foot-badges { display:flex; flex-wrap:wrap; gap:8px; }
+.fbadge {
+  font-size:9px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--gold); border:1px solid rgba(184,145,43,.28);
+  padding:4px 10px;
+}
+
+.foot-col h5 {
+  font-size:9px; font-weight:500;
+  letter-spacing:3px; text-transform:uppercase;
+  color:rgba(255,255,255,.22); margin-bottom:18px;
+}
+.foot-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.foot-col a {
+  font-size:13px; font-weight:300;
+  color:rgba(255,255,255,.42); text-decoration:none;
+  transition: color .2s;
+}
+.foot-col a:hover { color:var(--white); }
+
+.foot-bottom {
+  max-width:1140px; margin:0 auto;
+  padding-top:26px; border-top:1px solid rgba(255,255,255,.06);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.foot-copy { font-size:11px; color:rgba(255,255,255,.18); letter-spacing:1px; }
+
+/* ─────────────────────────────────────
+   WHATSAPP FLOAT
+───────────────────────────────────── */
+.wa-float {
+  position:fixed; bottom:28px; right:28px; z-index:9000;
+  display:flex; align-items:center; gap:0;
+}
+
+.wa-pill {
+  background:var(--black); color:var(--white);
+  font-size:11px; font-weight:400; letter-spacing:1px;
+  padding:11px 16px 11px 18px;
+  opacity:0; pointer-events:none;
+  transition: opacity .25s;
+  white-space:nowrap;
+}
+
+.wa-float:hover .wa-pill { opacity:1; pointer-events:auto; }
+
+.wa-circle {
+  width:52px; height:52px; border-radius:50%;
+  background:#25D366;
+  display:flex; align-items:center; justify-content:center;
+  font-size:24px; text-decoration:none;
+  box-shadow:0 4px 18px rgba(37,211,102,.3);
+  transition: transform .2s, box-shadow .2s;
+  flex-shrink:0;
+}
+.wa-float:hover .wa-circle {
+  transform:scale(1.08);
+  box-shadow:0 6px 26px rgba(37,211,102,.45);
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+@media (max-width:960px) {
+  nav { padding:0 20px; }
+  .nav-menu { display:none; }
+  .hero { grid-template-columns:1fr; }
+  .hero-l { padding:72px 24px 56px; }
+  .hero-l::after { display:none; }
+  .hero-r { padding:40px 24px; min-height:auto; }
+  .sec { padding:72px 24px; }
+  .about-grid,
+  .contact-grid,
+  .foot-top { grid-template-columns:1fr; gap:40px; }
+  .svc-grid,
+  .gold-cards { grid-template-columns:1fr; }
+  .process-grid { grid-template-columns:1fr 1fr; gap:40px; }
+  .process-grid::before { display:none; }
+  .trust-cells { grid-template-columns:1fr 1fr; }
+  footer { padding:56px 24px 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     NAV
+═══════════════════════════════════ -->
+<nav>
+  <a href="#" class="logo-wrap">
+    <div class="logo-emblem">
+      <svg viewBox="0 0 20 20">
+        <polygon points="10,2 18,6.5 18,13.5 10,18 2,13.5 2,6.5"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-text-main">EastBridge Gold Dealers</div>
+      <span class="logo-text-sub">Kampala, Uganda · Est. Gold Trade</span>
+    </div>
+  </a>
+
+  <ul class="nav-menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gold">Gold</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <a href="#contact" class="nav-cta">Get a Quote</a>
+</nav>
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-l">
+    <div class="h-tag">
+      <div class="h-tag-bar"></div>
+      <span>Licensed · Ministry of Energy & Minerals · Uganda</span>
+    </div>
+
+    <h1 class="hero-h1">
+      Your Trusted<br>
+      Bridge to<br>
+      <i>African Gold.</i>
+    </h1>
+
+    <p class="hero-p">
+      EastBridge Gold Dealers is a licensed Ugandan gold company sourcing premium natural gold from the Democratic Republic of Congo — fully documented, certified, and shipped to any country worldwide.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contact" class="btn-blk">Request a Quote</a>
+      <a href="#gold"    class="btn-txt">View Gold Supply</a>
+    </div>
+  </div>
+
+  <div class="hero-r">
+    <div class="hero-watermark">Au</div>
+    <div class="hero-stats fade in">
+      <div class="hstat">
+        <div class="hstat-v">22–24<sup>K</sup></div>
+        <div class="hstat-l">Gold Purity</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v" style="font-size:26px;padding-top:6px;">DRC</div>
+        <div class="hstat-l">Source Origin</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v">500<sup>g+</sup></div>
+        <div class="hstat-l">Min. Order</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-v">100<sup>%</sup></div>
+        <div class="hstat-l">Documented</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TICKER
+═══════════════════════════════════ -->
+<div class="ticker">
+  <div class="ticker-rail">
+    <div class="t-item"><b>Natural Gold</b><span class="t-sep"></span>DRC Origin<span class="t-sep"></span>Available Now</div>
+    <div class="t-item"><b>22K – 24K Purity</b><span class="t-sep"></span>Independently Assayed & Certified</div>
+    <div class="t-item"><b>Ministry Licensed</b><span class="t-sep"></span>Uganda Ministry of Energy & Minerals</div>
+    <div class="t-item"><b>Worldwide Shipping</b><span class="t-sep"></span>Full Export Documentation Included</div>
+    <div class="t-item"><b>LME Spot Pricing</b><span class="t-sep"></span>Transparent · Competitive · Negotiable</div>
+    <div class="t-item"><b>Natural Gold</b><span class="t-sep"></span>DRC Origin<span class="t-sep"></span>Available Now</div>
+    <div class="t-item"><b>22K – 24K Purity</b><span class="t-sep"></span>Independently Assayed & Certified</div>
+    <div class="t-item"><b>Ministry Licensed</b><span class="t-sep"></span>Uganda Ministry of Energy & Minerals</div>
+    <div class="t-item"><b>Worldwide Shipping</b><span class="t-sep"></span>Full Export Documentation Included</div>
+    <div class="t-item"><b>LME Spot Pricing</b><span class="t-sep"></span>Transparent · Competitive · Negotiable</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     ABOUT
+═══════════════════════════════════ -->
+<section class="sec" id="about">
+  <div class="sec-in">
+    <div class="about-grid">
+
+      <div class="about-copy fade">
+        <div class="s-label"><div class="s-label-bar"></div><span>About Us</span></div>
+        <h2 class="s-title">The East African Bridge<br>to <i>DRC Gold</i></h2>
+        <p>EastBridge Gold Dealers is a professional gold trading and export company headquartered in Kampala, Uganda. We operate under full authorisation from the <strong>Ministry of Energy and Minerals of Uganda</strong> — legally licensed to procure, trade, and export gold and precious minerals.</p>
+        <p>We source premium natural gold directly from the Democratic Republic of Congo, one of the world's most mineral-abundant territories. Our supply chain is established, verified, and traceable — giving international buyers the confidence and compliance they need.</p>
+        <p>We serve refineries, bullion dealers, importers, and institutional buyers across Europe, the Middle East, Asia, and the Americas. Our commitment: quality gold, honest pricing, and complete paperwork on every deal.</p>
+        <div class="lic-box fade">
+          <div class="lic-box-tag">Licensing</div>
+          <div class="lic-box-text">"Authorised by the Ministry of Energy and Minerals, Republic of Uganda, to procure, trade in, and export gold and precious minerals in accordance with Ugandan law."</div>
+        </div>
+      </div>
+
+      <div class="about-list fade">
+        <div class="alist-row">
+          <div class="alist-n">01</div>
+          <div>
+            <div class="alist-title">Verified DRC Source</div>
+            <div class="alist-desc">Gold sourced from established, trusted artisanal miners in eastern DRC through long-term supply relationships with proven traceability.</div>
+          </div>
+        </div>
+        <div class="alist-row">
+          <div class="alist-n">02</div>
+          <div>
+            <div class="alist-title">Uganda Licensed</div>
+            <div class="alist-desc">Fully authorised under the laws of Uganda. Ministry license, export permits, and compliance certificates provided with every shipment.</div>
+          </div>
+        </div>
+        <div class="alist-row">
+          <div class="alist-n">03</div>
+          <div>
+            <div class="alist-title">Ships Anywhere</div>
+            <div class="alist-desc">We deliver to any country through official Uganda customs channels with insured, tracked, and secure international courier services.</div>
+          </div>
+        </div>
+        <div class="alist-row">
+          <div class="alist-n">04</div>
+          <div>
+            <div class="alist-title">LME-Pegged Pricing</div>
+            <div class="alist-desc">All pricing is transparently pegged to the London Metal Exchange daily spot rate. No hidden fees. No surprises. Negotiable on volume.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TRUST BAND
+═══════════════════════════════════ -->
+<div class="trust-band">
+  <div class="trust-cells">
+    <div class="tcell fade">
+      <div class="tcell-icon">🏛️</div>
+      <div class="tcell-title">Ministry Licensed</div>
+      <div class="tcell-desc">Ministry of Energy & Minerals, Uganda. Full legal authority to trade and export gold.</div>
+    </div>
+    <div class="tcell fade">
+      <div class="tcell-icon">📋</div>
+      <div class="tcell-title">Full Documentation</div>
+      <div class="tcell-desc">Export permits, assay certificates, ICGLR compliance, and commercial invoices included.</div>
+    </div>
+    <div class="tcell fade">
+      <div class="tcell-icon">🌍</div>
+      <div class="tcell-title">DRC Sourced Gold</div>
+      <div class="tcell-desc">Natural gold from the mineral-rich Democratic Republic of Congo — traceable and verified.</div>
+    </div>
+    <div class="tcell fade">
+      <div class="tcell-icon">✈️</div>
+      <div class="tcell-title">Ships Worldwide</div>
+      <div class="tcell-desc">Insured international delivery to any country via official Ugandan export channels.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     SERVICES
+═══════════════════════════════════ -->
+<section class="sec services-sec" id="services">
+  <div class="sec-in">
+    <div class="s-label"><div class="s-label-bar"></div><span>Services</span></div>
+    <h2 class="s-title fade" style="color:var(--white);">What We <i>Offer</i></h2>
+
+    <div class="svc-grid">
+      <div class="svc-card fade">
+        <div class="svc-n">01</div>
+        <div class="svc-ico">⛏️</div>
+        <div class="svc-name">Gold Procurement</div>
+        <p class="svc-desc">We source alluvial and hard-rock gold from vetted miners across eastern DRC, ensuring consistent purity, traceable origin, and reliable volume on every order.</p>
+      </div>
+      <div class="svc-card fade">
+        <div class="svc-n">02</div>
+        <div class="svc-ico">🔬</div>
+        <div class="svc-name">Assay & Certification</div>
+        <p class="svc-desc">All gold is independently tested and certified for purity before dispatch. Buyers receive a full assay report — typically 22K to 24K — clearly documented and verifiable.</p>
+      </div>
+      <div class="svc-card fade">
+        <div class="svc-n">03</div>
+        <div class="svc-ico">📦</div>
+        <div class="svc-name">Export & Logistics</div>
+        <p class="svc-desc">We manage the complete export process — Uganda Revenue Authority customs clearance, Ministry permits, and secure insured international courier to your destination.</p>
+      </div>
+      <div class="svc-card fade">
+        <div class="svc-n">04</div>
+        <div class="svc-ico">📄</div>
+        <div class="svc-name">Documentation Package</div>
+        <p class="svc-desc">Every shipment includes the Ministry license, export permit, ICGLR certificate, independent assay report, and full commercial invoice — meeting all buyer due diligence requirements.</p>
+      </div>
+      <div class="svc-card fade">
+        <div class="svc-n">05</div>
+        <div class="svc-ico">🤝</div>
+        <div class="svc-name">Bulk Supply Contracts</div>
+        <p class="svc-desc">From 500g trial shipments to ongoing monthly multi-kilogram contracts. We accommodate first-time buyers and long-term commercial partners with flexible, transparent agreements.</p>
+      </div>
+      <div class="svc-card fade">
+        <div class="svc-n">06</div>
+        <div class="svc-ico">🏢</div>
+        <div class="svc-name">Buyer Verification Visits</div>
+        <p class="svc-desc">Serious buyers are welcome to visit our Kampala office, inspect gold in person, and review all original documents. We believe face-to-face transparency builds lasting partnerships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     GOLD SUPPLY
+═══════════════════════════════════ -->
+<section class="sec gold-sec" id="gold">
+  <div class="sec-in">
+    <div class="s-label"><div class="s-label-bar"></div><span>Gold Supply</span></div>
+    <h2 class="s-title fade">Available <i>Gold</i></h2>
+
+    <div class="gold-cards">
+
+      <div class="gcard fade">
+        <div class="gcard-head">
+          <span class="gtag">Raw Gold</span>
+          <div class="gavail"></div>
+        </div>
+        <div class="gname">Alluvial Gold Dust</div>
+        <div class="gorigin">DRC · Washed & Dried</div>
+        <p class="gdesc">Natural alluvial gold collected from river deposits in eastern DRC. Ideal raw feedstock for refineries, smelters, and gold processors worldwide.</p>
+        <div class="gspecs">
+          <div class="gspec"><span class="gsk">Purity</span><span class="gsv">88 – 92% (≈22K)</span></div>
+          <div class="gspec"><span class="gsk">Min. Order</span><span class="gsv">500 grams</span></div>
+          <div class="gspec"><span class="gsk">Pricing</span><span class="gsv">LME Spot Based</span></div>
+          <div class="gspec"><span class="gsk">Assay Report</span><span class="gsv">Included</span></div>
+        </div>
+        <a href="#contact" class="gbtn">Enquire Now</a>
+      </div>
+
+      <div class="gcard fade">
+        <div class="gcard-head">
+          <span class="gtag">Smelted Bar</span>
+          <div class="gavail"></div>
+        </div>
+        <div class="gname">Gold Bars — 1kg</div>
+        <div class="gorigin">DRC · Smelted & Cast</div>
+        <p class="gdesc">Refined and smelted to 1kg cast bars with certified 24K purity. Ideal for bullion investment, trading houses, and international gold buyers.</p>
+        <div class="gspecs">
+          <div class="gspec"><span class="gsk">Purity</span><span class="gsv">96 – 99.5% (24K)</span></div>
+          <div class="gspec"><span class="gsk">Min. Order</span><span class="gsv">1 kilogram</span></div>
+          <div class="gspec"><span class="gsk">Pricing</span><span class="gsv">LME Spot + Premium</span></div>
+          <div class="gspec"><span class="gsk">Certification</span><span class="gsv">Stamped & Certified</span></div>
+        </div>
+        <a href="#contact" class="gbtn">Enquire Now</a>
+      </div>
+
+      <div class="gcard fade">
+        <div class="gcard-head">
+          <span class="gtag">Bulk Contract</span>
+          <div class="gavail"></div>
+        </div>
+        <div class="gname">Monthly Supply</div>
+        <div class="gorigin">DRC · 5kg+ Per Month</div>
+        <p class="gdesc">Ongoing monthly supply agreements for established buyers. Fixed volumes, guaranteed quality, priority documentation, and contract pricing.</p>
+        <div class="gspecs">
+          <div class="gspec"><span class="gsk">Purity</span><span class="gsv">As agreed</span></div>
+          <div class="gspec"><span class="gsk">Min. Volume</span><span class="gsv">5 kg / month</span></div>
+          <div class="gspec"><span class="gsk">Pricing</span><span class="gsv">Contract Rate</span></div>
+          <div class="gspec"><span class="gsk">Contract Term</span><span class="gsv">3 – 12 months</span></div>
+        </div>
+        <a href="#contact" class="gbtn">Discuss Terms</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     PROCESS
+═══════════════════════════════════ -->
+<section class="sec process-sec" id="process">
+  <div class="sec-in">
+    <div class="s-label"><div class="s-label-bar"></div><span>Process</span></div>
+    <h2 class="s-title fade">Simple. Transparent. <i>Reliable.</i></h2>
+
+    <div class="process-grid">
+      <div class="pstep fade">
+        <div class="pstep-ring">1</div>
+        <div class="pstep-title">Contact Us</div>
+        <p class="pstep-desc">Reach out by email or WhatsApp with your required quantity, purity, and destination country.</p>
+      </div>
+      <div class="pstep fade">
+        <div class="pstep-ring">2</div>
+        <div class="pstep-title">Receive Quote</div>
+        <p class="pstep-desc">We issue a formal price quote based on the current LME spot rate with documentation overview.</p>
+      </div>
+      <div class="pstep fade">
+        <div class="pstep-ring">3</div>
+        <div class="pstep-title">Assay & Verify</div>
+        <p class="pstep-desc">Gold is independently assayed. You receive the full certificate before any payment is finalised.</p>
+      </div>
+      <div class="pstep fade">
+        <div class="pstep-ring">4</div>
+        <div class="pstep-title">Export & Deliver</div>
+        <p class="pstep-desc">Exported through official Uganda customs with full Ministry permits and insured international shipping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     CONTACT
+═══════════════════════════════════ -->
+<section class="sec contact-sec" id="contact">
+  <div class="sec-in">
+    <div class="contact-grid">
+
+      <div class="fade">
+        <div class="s-label"><div class="s-label-bar"></div><span>Contact</span></div>
+        <h2 class="s-title">Ready to<br><i>Start a Deal?</i></h2>
+        <p style="font-size:15px;line-height:1.9;color:#5E5C58;max-width:400px;">Contact us directly. We respond to all genuine enquiries within 24 hours and are happy to discuss pricing, documentation, logistics, and visit arrangements.</p>
+
+        <div class="c-info">
+          <a href="mailto:eastbridgegolddealers6@gmail.com" class="citem">
+            <span class="citem-ico">✉️</span>
+            <div>
+              <div class="citem-lbl">Email</div>
+              <div class="citem-val">eastbridgegolddealers6@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+256778387412" class="citem">
+            <span class="citem-ico">📞</span>
+            <div>
+              <div class="citem-lbl">Phone</div>
+              <div class="citem-val">+256 778 387 412</div>
+            </div>
+          </a>
+          <a href="https://wa.me/256778387412" target="_blank" class="citem">
+            <span class="citem-ico">💬</span>
+            <div>
+              <div class="citem-lbl">WhatsApp</div>
+              <div class="citem-val">+256 778 387 412</div>
+            </div>
+          </a>
+          <div class="citem">
+            <span class="citem-ico">📍</span>
+            <div>
+              <div class="citem-lbl">Office</div>
+              <div class="citem-val">Kampala, Uganda</div>
+            </div>
+          </div>
+          <div class="citem">
+            <span class="citem-ico">🕐</span>
+            <div>
+              <div class="citem-lbl">Business Hours</div>
+              <div class="citem-val">Monday – Saturday, 8am – 6pm EAT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-form fade">
+        <div class="cf-title">Send an Enquiry</div>
+        <p class="cf-sub">Tell us what you need and we'll respond with pricing, availability, and full documentation details.</p>
+        <form onsubmit="formSent(event)">
+          <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
+          <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com" required></div>
+          <div class="fg"><label>Country</label><input type="text" placeholder="Your country"></div>
+          <div class="fg">
+            <label>Gold Type Required</label>
+            <select>
+              <option>Alluvial Gold Dust (500g+)</option>
+              <option>Smelted Gold Bars (1kg+)</option>
+              <option>Monthly Bulk Contract (5kg+)</option>
+              <option>Not Sure — Please Advise</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea placeholder="Quantity needed, destination country, any questions..."></textarea></div>
+          <button type="submit" class="cf-submit" id="cfbtn">Send Enquiry →</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <a href="#" class="foot-logo-wrap">
+        <div class="foot-logo-mark">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 18,6.5 18,13.5 10,18 2,13.5 2,6.5"/></svg>
+        </div>
+        <span class="foot-logo-name">EastBridge Gold Dealers</span>
+      </a>
+      <p class="foot-desc">Licensed gold supplier headquartered in Kampala, Uganda. Sourcing premium natural gold from the DRC and delivering worldwide with full compliance and documentation.</p>
+      <div class="foot-badges">
+        <span class="fbadge">Ministry Licensed</span>
+        <span class="fbadge">DRC Sourced</span>
+        <span class="fbadge">Worldwide Export</span>
+      </div>
+    </div>
+
+    <div class="foot-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Gold Procurement</a></li>
+        <li><a href="#services">Assay & Certification</a></li>
+        <li><a href="#services">Export & Logistics</a></li>
+        <li><a href="#services">Bulk Contracts</a></li>
+        <li><a href="#services">Buyer Visits</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="#">Kampala, Uganda</a></li>
+        <li><a href="mailto:eastbridgegolddealers6@gmail.com">eastbridgegolddealers6@gmail.com</a></li>
+        <li><a href="tel:+256778387412">+256 778 387 412</a></li>
+        <li><a href="https://wa.me/256778387412" target="_blank">WhatsApp Us</a></li>
+        <li><a href="#">Mon – Sat, 8am – 6pm EAT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot-bottom">
+    <span class="foot-copy">© 2025 EastBridge Gold Dealers · Kampala, Uganda</span>
+    <span class="foot-copy">Licensed · Ministry of Energy & Minerals · Uganda</span>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════
+     WHATSAPP FLOAT
+═══════════════════════════════════ -->
+<div class="wa-float">
+  <div class="wa-pill">Chat on WhatsApp</div>
+  <a href="https://wa.me/256778387412" target="_blank" class="wa-circle" title="WhatsApp">💬</a>
+</div>
+
+<!-- ═══════════════════════════════════
+     JS
+═══════════════════════════════════ -->
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 65);
+      }
+    });
+  }, { threshold: 0.07 });
+
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
+  // Form submit
+  function formSent(e) {
+    e.preventDefault();
+    const btn = document.getElementById('cfbtn');
+    btn.textContent = '✓ Sent — We\'ll reply within 24 hours';
+    btn.style.background = '#3CC76A';
+    btn.style.color = '#fff';
+    btn.disabled = true;
+  }
+</script>
+
+</body>
+</html>
