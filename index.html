@@ -5,13 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EastBridge Gold Dealers — Licensed Gold Supplier, Kampala Uganda</title>
 <meta name="description" content="EastBridge Gold Dealers — Licensed by Uganda Ministry of Energy & Minerals. Premium natural gold sourced from DRC, shipped worldwide. Contact us today.">
-
-<!-- Favicons -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
 /* ─────────────────────────────────────
@@ -888,6 +881,190 @@ footer {
   transition:color .2s;
 }
 .vlightbox-close:hover { color:var(--gold); }
+/* ─────────────────────────────────────
+   LICENSING & DOCUMENTS
+───────────────────────────────────── */
+.docs-section {
+  background: var(--white);
+  padding: 110px 60px;
+}
+
+.docs-header { max-width:700px; margin-bottom:56px; }
+.docs-title { color:var(--black); }
+.docs-intro {
+  font-size:15px; font-weight:300; line-height:1.9;
+  color:#666; margin-top:10px;
+}
+
+/* Registration banner */
+.docs-reg-banner {
+  display:flex; align-items:flex-start; gap:32px;
+  background:var(--black);
+  border:1px solid #222; border-left:4px solid var(--gold);
+  padding:36px 40px;
+  margin-bottom:48px;
+}
+
+.docs-reg-left {
+  display:flex; align-items:flex-start; gap:20px;
+  flex-shrink:0; padding-top:4px;
+}
+
+.docs-reg-icon { font-size:36px; flex-shrink:0; }
+
+.docs-reg-title {
+  font-family:'Cormorant', serif;
+  font-size:20px; font-weight:700;
+  color:var(--white); margin-bottom:4px;
+}
+.docs-reg-sub {
+  font-size:11px; letter-spacing:1.5px;
+  color:var(--gold); text-transform:uppercase;
+}
+
+.docs-reg-details {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:0; border-left:1px solid #2a2a2a;
+  padding-left:32px; flex:1;
+}
+.docs-reg-item {
+  display:flex; flex-direction:column; gap:3px;
+  padding:10px 0;
+  border-bottom:1px solid #1e1e1e;
+}
+.docs-reg-key {
+  font-size:9px; letter-spacing:2.5px; text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+}
+.docs-reg-val {
+  font-size:13px; font-weight:400; color:var(--white);
+}
+
+/* Document cards */
+.docs-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:20px; margin-bottom:40px;
+}
+
+.doc-card {
+  background:var(--cream);
+  border:1px solid var(--line);
+  padding:36px 32px;
+  position:relative;
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+}
+.doc-card:hover {
+  border-color:var(--gold);
+  box-shadow:0 8px 32px rgba(184,145,43,.1);
+  transform:translateY(-3px);
+}
+
+.doc-card-icon-wrap {
+  margin-bottom:20px;
+}
+
+.doc-card-ref {
+  font-size:9px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--gold); margin-bottom:8px;
+}
+.doc-card-name {
+  font-family:'Cormorant', serif;
+  font-size:20px; font-weight:700;
+  color:var(--black); margin-bottom:12px;
+  line-height:1.2;
+}
+.doc-card-desc {
+  font-size:13px; font-weight:300; line-height:1.8;
+  color:#666; margin-bottom:20px;
+}
+
+.doc-card-meta {
+  display:flex; justify-content:space-between;
+  align-items:center; margin-bottom:16px;
+  padding-bottom:16px; border-bottom:1px solid var(--line);
+}
+.doc-meta-tag {
+  font-size:10px; font-weight:500; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--white);
+  background:var(--black); padding:4px 12px;
+}
+.doc-meta-date {
+  font-size:11px; color:var(--dim); letter-spacing:1px;
+}
+.doc-card-footer {
+  font-size:11px; color:var(--dim); letter-spacing:1px;
+  font-style:italic;
+}
+
+/* Document package list */
+.docs-package {
+  background:var(--black);
+  border:1px solid #222;
+  overflow:hidden;
+}
+
+.docs-package-header {
+  padding:32px 40px 28px;
+  border-bottom:1px solid #1e1e1e;
+}
+.docs-package-title {
+  font-family:'Cormorant', serif;
+  font-size:22px; font-weight:700;
+  color:var(--white); margin-bottom:4px;
+}
+.docs-package-sub {
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+}
+
+.docs-package-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:0; background:#111;
+}
+.docs-pkg-item {
+  display:flex; align-items:center; gap:16px;
+  padding:16px 32px;
+  border-bottom:1px solid #1a1a1a;
+  background:#0e0e0e;
+  transition: background .2s;
+}
+.docs-pkg-item:hover { background:#141414; }
+
+.pkg-num {
+  width:28px; height:28px; border-radius:50%;
+  background:var(--gold); color:var(--black);
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:700; flex-shrink:0;
+}
+.pkg-name {
+  font-size:13px; font-weight:400; color:var(--white);
+  flex:1;
+}
+.pkg-ref {
+  font-size:10px; letter-spacing:1px; color:rgba(255,255,255,.3);
+  flex-shrink:0;
+}
+
+.docs-package-cta {
+  padding:28px 40px;
+  display:flex; align-items:center; gap:24px;
+  border-top:1px solid #1e1e1e;
+}
+.docs-pkg-note {
+  font-size:12px; color:rgba(255,255,255,.3);
+  font-style:italic; letter-spacing:.5px;
+}
+
+/* Responsive */
+@media (max-width:960px) {
+  .docs-section { padding:72px 24px; }
+  .docs-reg-banner { flex-direction:column; }
+  .docs-reg-details { grid-template-columns:1fr; border-left:none; padding-left:0; border-top:1px solid #2a2a2a; padding-top:20px; }
+  .docs-grid { grid-template-columns:1fr; }
+  .docs-package-grid { grid-template-columns:1fr; }
+  .docs-package-cta { flex-direction:column; align-items:flex-start; }
+}
+
 </style>
 </head>
 <body>
@@ -913,6 +1090,7 @@ footer {
     <li><a href="#services">Services</a></li>
     <li><a href="#gold">Gold</a></li>
     <li><a href="#process">Process</a></li>
+    <li><a href="#documents">Documents</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1243,6 +1421,226 @@ footer {
 </section>
 
 <!-- ═══════════════════════════════════
+     CONTACT
+═══════════════════════════════════ -->
+<!-- ═══════════════════════════════════
+     LICENSING & DOCUMENTS
+═══════════════════════════════════ -->
+<section class="docs-section" id="documents">
+  <div class="sec-in">
+
+    <div class="docs-header fade">
+      <div class="s-label"><div class="s-label-bar" style="background:var(--gold)"></div><span style="color:var(--gold)">Licensing & Compliance</span></div>
+      <h2 class="s-title docs-title">Fully Licensed. <i>100% Documented.</i></h2>
+      <p class="docs-intro">EastBridge Gold Dealers Ltd is a legally registered company under the laws of Uganda. Every transaction we complete is backed by official government-issued documentation. Serious buyers can request copies of any document below.</p>
+    </div>
+
+    <!-- ── COMPANY REGISTRATION HIGHLIGHT ── -->
+    <div class="docs-reg-banner fade">
+      <div class="docs-reg-left">
+        <div class="docs-reg-icon">🏛️</div>
+        <div>
+          <div class="docs-reg-title">Officially Registered Company</div>
+          <div class="docs-reg-sub">Uganda Registration Services Bureau (URSB) · The Companies Act, 2012</div>
+        </div>
+      </div>
+      <div class="docs-reg-details">
+        <div class="docs-reg-item">
+          <span class="docs-reg-key">Company Name</span>
+          <span class="docs-reg-val">EastBridge Gold Dealers Limited</span>
+        </div>
+        <div class="docs-reg-item">
+          <span class="docs-reg-key">Company Number</span>
+          <span class="docs-reg-val">80034144459706</span>
+        </div>
+        <div class="docs-reg-item">
+          <span class="docs-reg-key">Date of Incorporation</span>
+          <span class="docs-reg-val">20 February 2025</span>
+        </div>
+        <div class="docs-reg-item">
+          <span class="docs-reg-key">Director</span>
+          <span class="docs-reg-val">Kasumba Stephen</span>
+        </div>
+        <div class="docs-reg-item">
+          <span class="docs-reg-key">Registered Address</span>
+          <span class="docs-reg-val">Plot 151, Bukasa, Muyenga, Kampala, Uganda</span>
+        </div>
+        <div class="docs-reg-item">
+          <span class="docs-reg-key">Postal Address</span>
+          <span class="docs-reg-val">P.O. Box 06220, Kampala, Uganda</span>
+        </div>
+        <div class="docs-reg-item">
+          <span class="docs-reg-key">Governing Law</span>
+          <span class="docs-reg-val">Laws of Uganda / UNCITRAL International Trade Law</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DOCUMENT CARDS GRID ── -->
+    <div class="docs-grid">
+
+      <!-- Card 1: Company Registration -->
+      <div class="doc-card fade">
+        <div class="doc-card-icon-wrap">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+            <rect x="8" y="4" width="36" height="48" rx="3" fill="#1a1600" stroke="#c09a2a" stroke-width="1.5"/>
+            <rect x="8" y="4" width="36" height="10" rx="3" fill="#c09a2a" opacity="0.8"/>
+            <line x1="16" y1="22" x2="44" y2="22" stroke="#c09a2a" stroke-width="1.2" opacity="0.6"/>
+            <line x1="16" y1="29" x2="44" y2="29" stroke="#c09a2a" stroke-width="1.2" opacity="0.4"/>
+            <line x1="16" y1="36" x2="36" y2="36" stroke="#c09a2a" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="38" cy="42" r="8" fill="#1a1600" stroke="#c09a2a" stroke-width="1.5"/>
+            <text x="38" y="46" font-size="8" fill="#c09a2a" text-anchor="middle" font-weight="bold">✓</text>
+          </svg>
+        </div>
+        <div class="doc-card-ref">URSB · G251204-0687</div>
+        <div class="doc-card-name">Company Registration</div>
+        <div class="doc-card-desc">Officially registered with Uganda Registration Services Bureau under The Companies Act, 2012. Single member company with full legal standing.</div>
+        <div class="doc-card-meta">
+          <span class="doc-meta-tag">✓ Verified</span>
+          <span class="doc-meta-date">Feb 20, 2025</span>
+        </div>
+        <div class="doc-card-footer">Available on request · Contact us to verify</div>
+      </div>
+
+      <!-- Card 2: Ministry License -->
+      <div class="doc-card fade">
+        <div class="doc-card-icon-wrap">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+            <rect x="6" y="8" width="48" height="36" rx="3" fill="#1a1600" stroke="#c09a2a" stroke-width="1.5"/>
+            <rect x="6" y="8" width="48" height="8" rx="3" fill="#c09a2a" opacity="0.8"/>
+            <circle cx="30" cy="34" r="10" fill="none" stroke="#c09a2a" stroke-width="1.5" opacity="0.6"/>
+            <text x="30" y="38" font-size="10" fill="#c09a2a" text-anchor="middle">★</text>
+            <line x1="14" y1="22" x2="46" y2="22" stroke="#c09a2a" stroke-width="1" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="doc-card-ref">Ministry of Energy & Minerals · Uganda</div>
+        <div class="doc-card-name">Trade & Export License</div>
+        <div class="doc-card-desc">Licensed by the Ministry of Energy and Minerals of Uganda to procure, trade in, and export gold and precious minerals under Ugandan law.</div>
+        <div class="doc-card-meta">
+          <span class="doc-meta-tag">✓ Active</span>
+          <span class="doc-meta-date">2026</span>
+        </div>
+        <div class="doc-card-footer">Available on request · Contact us to verify</div>
+      </div>
+
+      <!-- Card 3: Export Permit -->
+      <div class="doc-card fade">
+        <div class="doc-card-icon-wrap">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+            <rect x="8" y="6" width="36" height="46" rx="3" fill="#1a1600" stroke="#c09a2a" stroke-width="1.5"/>
+            <rect x="8" y="6" width="36" height="9" fill="#c09a2a" opacity="0.7"/>
+            <text x="26" y="14" font-size="7" fill="#1a1600" text-anchor="middle" font-weight="bold">PERMIT</text>
+            <line x1="14" y1="22" x2="38" y2="22" stroke="#c09a2a" stroke-width="1" opacity="0.5"/>
+            <line x1="14" y1="28" x2="38" y2="28" stroke="#c09a2a" stroke-width="1" opacity="0.4"/>
+            <line x1="14" y1="34" x2="30" y2="34" stroke="#c09a2a" stroke-width="1" opacity="0.4"/>
+            <rect x="26" y="40" width="16" height="10" rx="2" fill="none" stroke="#c09a2a" stroke-width="1.2" opacity="0.6"/>
+            <text x="34" y="48" font-size="6" fill="#c09a2a" text-anchor="middle">STAMP</text>
+          </svg>
+        </div>
+        <div class="doc-card-ref">EGBT/EP/2026/011</div>
+        <div class="doc-card-name">Export Permit Declaration</div>
+        <div class="doc-card-desc">Official export permit authorising the shipment of Raw Gold (Au) — Dore Bars/Nuggets via Entebbe International Airport under CIF terms.</div>
+        <div class="doc-card-meta">
+          <span class="doc-meta-tag">✓ Valid</span>
+          <span class="doc-meta-date">Mar 31, 2026</span>
+        </div>
+        <div class="doc-card-footer">Available on request · Contact us to verify</div>
+      </div>
+
+      <!-- Card 4: Certificate of Origin -->
+      <div class="doc-card fade">
+        <div class="doc-card-icon-wrap">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+            <circle cx="30" cy="28" r="20" fill="#1a1600" stroke="#c09a2a" stroke-width="1.5"/>
+            <ellipse cx="30" cy="28" rx="8" ry="20" fill="none" stroke="#c09a2a" stroke-width="1" opacity="0.5"/>
+            <line x1="10" y1="28" x2="50" y2="28" stroke="#c09a2a" stroke-width="1" opacity="0.4"/>
+            <line x1="13" y1="18" x2="47" y2="18" stroke="#c09a2a" stroke-width="1" opacity="0.3"/>
+            <line x1="13" y1="38" x2="47" y2="38" stroke="#c09a2a" stroke-width="1" opacity="0.3"/>
+            <text x="30" y="55" font-size="7" fill="#c09a2a" text-anchor="middle" opacity="0.7">UG/DRC</text>
+          </svg>
+        </div>
+        <div class="doc-card-ref">EGBT/CO/2026/011</div>
+        <div class="doc-card-name">Certificate of Origin</div>
+        <div class="doc-card-desc">Certifies that all gold originates from Uganda / Democratic Republic of Congo (DRC), legally mined and processed. HS Code: 7108.12.00.</div>
+        <div class="doc-card-meta">
+          <span class="doc-meta-tag">✓ Certified</span>
+          <span class="doc-meta-date">Mar 31, 2026</span>
+        </div>
+        <div class="doc-card-footer">Available on request · Contact us to verify</div>
+      </div>
+
+      <!-- Card 5: Assay Certificate -->
+      <div class="doc-card fade">
+        <div class="doc-card-icon-wrap">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+            <rect x="10" y="6" width="32" height="44" rx="3" fill="#1a1600" stroke="#c09a2a" stroke-width="1.5"/>
+            <rect x="10" y="6" width="32" height="9" fill="#c09a2a" opacity="0.7"/>
+            <text x="26" y="14" font-size="6" fill="#1a1600" text-anchor="middle" font-weight="bold">ASSAY</text>
+            <text x="26" y="28" font-size="11" fill="#c09a2a" text-anchor="middle" font-weight="bold">98.4%</text>
+            <text x="26" y="36" font-size="7" fill="#c09a2a" text-anchor="middle" opacity="0.7">24 KARAT</text>
+            <line x1="16" y1="41" x2="36" y2="41" stroke="#c09a2a" stroke-width="1" opacity="0.4"/>
+            <text x="26" y="48" font-size="6" fill="#c09a2a" text-anchor="middle" opacity="0.6">CERTIFIED</text>
+          </svg>
+        </div>
+        <div class="doc-card-ref">Purity: 98.4% · 24 Karat</div>
+        <div class="doc-card-name">Assay Certificate</div>
+        <div class="doc-card-desc">Independent assay confirming gold purity of 98.4% (24 Karat). Assay conducted at internationally accredited refinery. Provided with every shipment.</div>
+        <div class="doc-card-meta">
+          <span class="doc-meta-tag">✓ Certified</span>
+          <span class="doc-meta-date">Per Shipment</span>
+        </div>
+        <div class="doc-card-footer">Provided with every order · No exceptions</div>
+      </div>
+
+      <!-- Card 6: Insurance Certificate -->
+      <div class="doc-card fade">
+        <div class="doc-card-icon-wrap">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+            <path d="M30 8 L50 16 L50 34 Q50 48 30 54 Q10 48 10 34 L10 16 Z" fill="#1a1600" stroke="#c09a2a" stroke-width="1.5"/>
+            <path d="M30 14 L44 20 L44 34 Q44 44 30 48 Q16 44 16 34 L16 20 Z" fill="none" stroke="#c09a2a" stroke-width="1" opacity="0.5"/>
+            <text x="30" y="36" font-size="16" fill="#c09a2a" text-anchor="middle">✓</text>
+          </svg>
+        </div>
+        <div class="doc-card-ref">EGBT/INS/2026/011 · USD 935,000</div>
+        <div class="doc-card-name">Cargo Insurance Certificate</div>
+        <div class="doc-card-desc">All-Risk Marine/Air Cargo Insurance covering 110% of invoice value (USD 935,000). Covers loss, theft, physical damage, war and strikes risk in transit.</div>
+        <div class="doc-card-meta">
+          <span class="doc-meta-tag">✓ Active</span>
+          <span class="doc-meta-date">Mar 31, 2026</span>
+        </div>
+        <div class="doc-card-footer">CIF terms — Seller bears full insurance cost</div>
+      </div>
+
+    </div>
+
+    <!-- ── FULL DOCUMENT PACKAGE LIST ── -->
+    <div class="docs-package fade">
+      <div class="docs-package-header">
+        <div class="docs-package-title">Complete Gold Trade Document Package</div>
+        <div class="docs-package-sub">All 10 documents issued per transaction · Ref: EGBT/2026/PACKAGE</div>
+      </div>
+      <div class="docs-package-grid">
+        <div class="docs-pkg-item"><span class="pkg-num">01</span><span class="pkg-name">Letter of Intent (LOI)</span><span class="pkg-ref">EGBT/LOI/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">02</span><span class="pkg-name">Full Corporate Offer (FCO)</span><span class="pkg-ref">EGBT/FCO/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">03</span><span class="pkg-name">Sale &amp; Purchase Agreement (SPA)</span><span class="pkg-ref">EGBT/SPA/2026/010</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">04</span><span class="pkg-name">Commercial Invoice</span><span class="pkg-ref">EGBT/INV/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">05</span><span class="pkg-name">Certificate of Origin</span><span class="pkg-ref">EGBT/CO/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">06</span><span class="pkg-name">Export Permit Declaration</span><span class="pkg-ref">EGBT/EP/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">07</span><span class="pkg-name">Packing List</span><span class="pkg-ref">EGBT/PL/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">08</span><span class="pkg-name">Cargo Insurance Certificate</span><span class="pkg-ref">EGBT/INS/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">09</span><span class="pkg-name">Payment Receipt</span><span class="pkg-ref">EGBT/RCP/2026/011</span></div>
+        <div class="docs-pkg-item"><span class="pkg-num">10</span><span class="pkg-name">Delivery Order &amp; Release Note</span><span class="pkg-ref">EGBT/DOR/2026/011</span></div>
+      </div>
+      <div class="docs-package-cta">
+        <a href="#contact" class="btn-blk" style="display:inline-block;">Request Document Package</a>
+        <span class="docs-pkg-note">Documents provided to serious buyers after initial contact · Confidential</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
      REVIEWS
 ═══════════════════════════════════ -->
 <section class="reviews-section" id="reviews">
@@ -1566,9 +1964,6 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════════════════════════
-     CONTACT
-═══════════════════════════════════ -->
 <section class="sec contact-sec" id="contact">
   <div class="sec-in">
     <div class="contact-grid">
@@ -1579,11 +1974,11 @@ footer {
         <p style="font-size:15px;line-height:1.9;color:#5E5C58;max-width:400px;">Contact us directly. We respond to all genuine enquiries within 24 hours and are happy to discuss pricing, documentation, logistics, and visit arrangements.</p>
 
         <div class="c-info">
-          <a href="mailto:eastbridgegolddealers6@gmail.com" class="citem">
+          <a href="/cdn-cgi/l/email-protection#f79296848395859e93909290989b939392969b928584c1b7909a969e9bd994989a" class="citem">
             <span class="citem-ico">✉️</span>
             <div>
               <div class="citem-lbl">Email</div>
-              <div class="citem-val">eastbridgegolddealers6@gmail.com</div>
+              <div class="citem-val">eastbridgegolddealers6&#64;gmail.com</div>
             </div>
           </a>
           <a href="tel:+256778387412" class="citem">
@@ -1690,7 +2085,7 @@ footer {
       <h5>Contact</h5>
       <ul>
         <li><a href="#">Kampala, Uganda</a></li>
-        <li><a href="mailto:eastbridgegolddealers6@gmail.com">eastbridgegolddealers6@gmail.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#284d495b5c4a5a414c4f4d4f47444c4c4d49444d5a5b1e684f45494144064b4745">eastbridgegolddealers6&#64;gmail.com</a></li>
         <li><a href="tel:+256778387412">+256 778 387 412</a></li>
         <li><a href="https://wa.me/256778387412" target="_blank">WhatsApp Uganda 🇺🇬 +256 778 387 412</a></li>
         <li><a href="https://wa.me/243832300940" target="_blank">WhatsApp Congo 🇨🇩 +243 832 300 940</a></li>
@@ -1823,7 +2218,6 @@ footer {
     });
   }
 </script>
-
 <!-- Video Lightbox -->
 <div class="vlightbox" id="vlightbox" onclick="closeVideo(event)">
   <div class="vlightbox-inner">
